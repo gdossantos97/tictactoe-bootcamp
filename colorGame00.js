@@ -8,10 +8,9 @@ const Sqaure = ({id , player}) => {
   return (
     // change color of Square on click 
     <button onClick={(e) => {
-      setColor(getRandomColor());
-      e.target.style.background = color;
+     alert(`I am square ${id}`)
     }}> 
-      <h1>{id}</h1>
+      <h1>{player}</h1>
     </button>
   )
 }
@@ -23,7 +22,7 @@ const Board = () => {
   const [player, setPlayer] = React.useState(0);
   let status = `Player ${player}`;
   function renderSquare(i) {
-    return<Sqaure id={i}></Sqaure>
+    return<Sqaure id={i} player = {player}></Sqaure>;
   }
   return (
     <div
